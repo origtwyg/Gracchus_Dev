@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracchus Dev Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Gracchus Dev site</h1>
+    </header>
+
+    <main>
+        <section id="description">
+            <p>This tool allows you to share a website link with others effortlessly. Just copy the URL below and share it!</p>
+        </section>
+
+        <section id="share-tool">
+            <input type="text" id="website-url" value="https://example.com" readonly>
+            <button id="copy-button">Copy Link</button>
+        </section>
+
+        <section id="info">
+            <p>Built with love for easy sharing. Visit our GitHub page for more projects!</p>
+            <a href="https://github.com/your-repository" target="_blank">View on GitHub</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Website Sharing Tool. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('copy-button').addEventListener('click', function() {
+            const urlInput = document.getElementById('website-url');
+            urlInput.select();
+            document.execCommand('copy');
+            alert('URL copied to clipboard!');
+        });
+    </script>
+</body>
+</html>
